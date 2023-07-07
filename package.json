@@ -3,7 +3,7 @@
   "packageManager": "yarn@3.6.1",
   "type": "commonjs",
   "scripts": {
-    "start": "ts-node src/index.ts"
+    "start": "dotenv ts-node src/index.ts"
   },
   "devDependencies": {
     "@types/node": "^20.4.0",

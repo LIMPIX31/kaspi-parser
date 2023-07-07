@@ -1,0 +1,24 @@
+services:
+  yarn:
+    image: node:20
+    working_dir: /workspace
+    volumes:
+      - ./:/workspace
+    entrypoint: yarn
+  db:
+    image: bitnami/postgresql:latest
+    environment:
+      - POSTGRESQL_PASSWORD=password
+      - POSTGRESQL_DATABASE=db
+      - POSTGRESQL_USER=postgres
+    ports:
+      - 5432:5432
+  parser:
+    image: node:20
+    working_dir: /workspace
+    volumes:
+      - ./:/workspace
+    entrypoint: yarn start
+    depends_on:
+      - yarn
+      - db

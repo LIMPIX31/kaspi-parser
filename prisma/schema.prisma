@@ -1,0 +1,6 @@
+model Proxy {
+  id Int @id @default(autoincrement())
+  host String
+  port Int
+  lastUsed DateTime @default(now())
+}
