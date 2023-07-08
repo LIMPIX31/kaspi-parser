@@ -18,6 +18,11 @@ async function dispose() {
 const proxySource = new ProxySource(prisma, PROXY_MAX_USAGE)
 
 async function main() {
+  // Раскомментировать если прокси используется
+  // if (!await proxySource.isEnought(5000)) {
+  //   console.log('Proxy list is not enough full')
+  // }
+
   // Получить первые 5000 артикулов
   const totalArticles = 5000
 
