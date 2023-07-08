@@ -74,11 +74,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@prisma/client@workspace:^, @prisma/client@workspace:prisma/client":
-  version: 0.0.0-use.local
-  resolution: "@prisma/client@workspace:prisma/client"
-  languageName: unknown
-  linkType: soft
+"@prisma/client@npm:^4.16.2":
+  version: 4.16.2
+  resolution: "@prisma/client@npm:4.16.2"
+  dependencies:
+    "@prisma/engines-version": "npm:4.16.1-1.4bc8b6e1b66cb932731fb1bdbbc550d1e010de81"
+  peerDependencies:
+    prisma: "*"
+  peerDependenciesMeta:
+    prisma:
+      optional: true
+  checksum: ed8e2e4463488943f5d0344c1c338c057c23d93342ccee34368a72a8ed7f604c6acb7c9528c4870b45218ba3f71143cd3796ca0d2a85e1e80977d33ae6d4004b
+  languageName: node
+  linkType: hard
+
+"@prisma/engines-version@npm:4.16.1-1.4bc8b6e1b66cb932731fb1bdbbc550d1e010de81":
+  version: 4.16.1-1.4bc8b6e1b66cb932731fb1bdbbc550d1e010de81
+  resolution: "@prisma/engines-version@npm:4.16.1-1.4bc8b6e1b66cb932731fb1bdbbc550d1e010de81"
+  checksum: 9a77db3f9e5a3b925af75c43699836e60e70b46e23f18de681ebcedcb0ac0356ea3c6270e7e4bccda0577c629360f578c5ae4e08b2525ac126f46f1be735c0c0
+  languageName: node
+  linkType: hard
 
 "@prisma/engines@npm:4.16.2":
   version: 4.16.2
@@ -86,6 +101,12 @@ __metadata:
   checksum: a4d0fd30097ca95cff2d5b7a705454901e71cf2125ae46b24fb0698f6284b14f46d3d423d273cb6a5d45440202f25ae02600e188832d4acf5df199b6a7901a4a
   languageName: node
   linkType: hard
+
+"@prisma/generated-client@workspace:^, @prisma/generated-client@workspace:prisma/client":
+  version: 0.0.0-use.local
+  resolution: "@prisma/generated-client@workspace:prisma/client"
+  languageName: unknown
+  linkType: soft
 
 "@sindresorhus/is@npm:^4.0.0":
   version: 4.6.0
@@ -817,7 +838,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "kaspi-parser@workspace:."
   dependencies:
-    "@prisma/client": "workspace:^"
+    "@prisma/client": "npm:^4.16.2"
+    "@prisma/generated-client": "workspace:^"
     "@types/node": "npm:^20.4.0"
     "@yarnpkg/pnpify": "npm:^4.0.0-rc.48"
     axios: "npm:^1.4.0"
@@ -829,6 +851,10 @@ __metadata:
     tslib: "npm:^2.6.0"
     typescript: "npm:^5.1.6"
   dependenciesMeta:
+    "@prisma/client@4.16.2":
+      unplugged: true
+    prisma@4.16.2:
+      unplugged: true
     ts-node@10.9.1:
       unplugged: true
   languageName: unknown

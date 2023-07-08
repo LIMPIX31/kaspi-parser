@@ -3,7 +3,7 @@
     "esm": true,
     "compilerOptions": {
       "paths": {
-        "@prisma/client": [
+        "@prisma/generated-client": [
           "prisma/client"
         ]
       }
@@ -27,7 +27,7 @@
     "strict": true,
     "skipLibCheck": true,
     "paths": {
-      "@prisma/client": [
+      "@prisma/generated-client": [
         "prisma/client"
       ]
     }
