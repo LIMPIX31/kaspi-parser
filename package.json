@@ -15,11 +15,15 @@
     "typescript": "^5.1.6"
   },
   "dependenciesMeta": {
+    "@prisma/client@4.16.2": {
+      "unplugged": true
+    },
     "ts-node@10.9.1": {
       "unplugged": true
     }
   },
   "dependencies": {
+    "@prisma/client": "^4.16.2",
     "axios": "^1.4.0",
     "prisma": "^4.16.2"
   }
