@@ -1,6 +1,10 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
 model Proxy {
-  id Int @id @default(autoincrement())
+  id   Int    @id @default(autoincrement())
   host String
   port Int
-  lastUsed DateTime @default(now())
 }

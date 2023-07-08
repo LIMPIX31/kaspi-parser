@@ -3,10 +3,12 @@
   "packageManager": "yarn@3.6.1",
   "type": "commonjs",
   "scripts": {
-    "start": "dotenv ts-node src/index.ts"
+    "start": "dotenv ts-node src/index.ts",
+    "migrate": "yarn pnpify prisma migrate dev"
   },
   "devDependencies": {
     "@types/node": "^20.4.0",
+    "@yarnpkg/pnpify": "^4.0.0-rc.48",
     "dotenv-cli": "^7.2.1",
     "prettier": "^3.0.0",
     "ts-node": "^10.9.1",
