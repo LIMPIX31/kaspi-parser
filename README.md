@@ -1,5 +1,9 @@
 # kaspi-parser
 
+# Requirements
+* Node: 18, 19
+* Do not use npm (yarn only)
+
 # Installation
 ```bash
 yarn # zero install
