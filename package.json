@@ -1,12 +1,12 @@
 {
   "name": "kaspi-parser",
   "packageManager": "yarn@3.6.1",
-  "type": "commonjs",
+  "type": "module",
   "workspaces": [
     "prisma/client"
   ],
   "scripts": {
-    "start": "dotenv ts-node src/index.ts",
+    "start": "dotenv yarn pnpify ts-node ./src/index.ts",
     "migrate": "yarn pnpify prisma migrate dev",
     "generate": "yarn pnpify prisma generate"
   },
@@ -16,6 +16,7 @@
     "dotenv-cli": "^7.2.1",
     "prettier": "^3.0.0",
     "ts-node": "^10.9.1",
+    "tslib": "^2.6.0",
     "typescript": "^5.1.6"
   },
   "dependenciesMeta": {
@@ -26,6 +27,7 @@
   "dependencies": {
     "@prisma/client": "workspace:^",
     "axios": "^1.4.0",
+    "p-all": "^5.0.0",
     "prisma": "^4.16.2"
   },
   "tsconfigWorkspaces": true

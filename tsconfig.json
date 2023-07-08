@@ -1,13 +1,23 @@
 {
+  "ts-node": {
+    "esm": true,
+    "compilerOptions": {
+      "paths": {
+        "@prisma/client": [
+          "prisma/client"
+        ]
+      }
+    }
+  },
   "compilerOptions": {
     "target": "ESNext",
     "lib": [
       "ESNext",
       "DOM"
     ],
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
-    "baseUrl": "./src",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "baseUrl": "./",
     "noEmit": true,
     "importHelpers": true,
     "newLine": "lf",

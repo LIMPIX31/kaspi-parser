@@ -1,5 +1,6 @@
 {
   "name": "@prisma/client",
+  "type": "commonjs",
   "main": "gen/index.js",
   "typings": "gen/index.d.ts"
 }
