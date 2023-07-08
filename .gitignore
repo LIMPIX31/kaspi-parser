@@ -60,3 +60,4 @@ dist
 .tern-port
 .vscode-test
 .idea
+prisma/gen

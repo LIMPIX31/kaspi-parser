@@ -12,11 +12,16 @@ const RAW_RUNTIME_STATE =
     {\
       "name": "kaspi-parser",\
       "reference": "workspace:."\
+    },\
+    {\
+      "name": "@prisma/client",\
+      "reference": "workspace:prisma/client"\
     }\
   ],\
   "enableTopLevelFallback": true,\
   "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
   "fallbackExclusionList": [\
+    ["@prisma/client", ["workspace:prisma/client"]],\
     ["kaspi-parser", ["workspace:."]]\
   ],\
   "fallbackPool": [\
@@ -26,7 +31,7 @@ const RAW_RUNTIME_STATE =
       [null, {\
         "packageLocation": "./",\
         "packageDependencies": [\
-          ["@prisma/client", "virtual:4349c0aec4bfbc571040e61015d1c8a33d59056152d89a97d109ddf9805d2aacee443b0916d4f26a7d367e9b10ef6e13ccc1d396cd8ec6d1a1014ab8ec11abda#npm:4.16.2"],\
+          ["@prisma/client", "workspace:prisma/client"],\
           ["@types/node", "npm:20.4.0"],\
           ["@yarnpkg/pnpify", "npm:4.0.0-rc.48"],\
           ["axios", "npm:1.4.0"],\
@@ -120,26 +125,12 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@prisma/client", [\
-      ["npm:4.16.2", {\
-        "packageLocation": "./.yarn/unplugged/@prisma-client-virtual-57eec242d7/node_modules/@prisma/client/",\
+      ["workspace:prisma/client", {\
+        "packageLocation": "./prisma/client/",\
         "packageDependencies": [\
-          ["@prisma/client", "npm:4.16.2"]\
+          ["@prisma/client", "workspace:prisma/client"]\
         ],\
         "linkType": "SOFT"\
-      }],\
-      ["virtual:4349c0aec4bfbc571040e61015d1c8a33d59056152d89a97d109ddf9805d2aacee443b0916d4f26a7d367e9b10ef6e13ccc1d396cd8ec6d1a1014ab8ec11abda#npm:4.16.2", {\
-        "packageLocation": "./.yarn/unplugged/@prisma-client-virtual-57eec242d7/node_modules/@prisma/client/",\
-        "packageDependencies": [\
-          ["@prisma/client", "virtual:4349c0aec4bfbc571040e61015d1c8a33d59056152d89a97d109ddf9805d2aacee443b0916d4f26a7d367e9b10ef6e13ccc1d396cd8ec6d1a1014ab8ec11abda#npm:4.16.2"],\
-          ["@prisma/engines-version", "npm:4.16.1-1.4bc8b6e1b66cb932731fb1bdbbc550d1e010de81"],\
-          ["@types/prisma", null],\
-          ["prisma", "npm:4.16.2"]\
-        ],\
-        "packagePeers": [\
-          "@types/prisma",\
-          "prisma"\
-        ],\
-        "linkType": "HARD"\
       }]\
     ]],\
     ["@prisma/engines", [\
@@ -147,15 +138,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/unplugged/@prisma-engines-npm-4.16.2-778c25af73/node_modules/@prisma/engines/",\
         "packageDependencies": [\
           ["@prisma/engines", "npm:4.16.2"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@prisma/engines-version", [\
-      ["npm:4.16.1-1.4bc8b6e1b66cb932731fb1bdbbc550d1e010de81", {\
-        "packageLocation": "./.yarn/cache/@prisma-engines-version-npm-4.16.1-1.4bc8b6e1b66cb932731fb1bdbbc550d1e010de81-fe5a2da6a4-9a77db3f9e.zip/node_modules/@prisma/engines-version/",\
-        "packageDependencies": [\
-          ["@prisma/engines-version", "npm:4.16.1-1.4bc8b6e1b66cb932731fb1bdbbc550d1e010de81"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -1020,7 +1002,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["kaspi-parser", "workspace:."],\
-          ["@prisma/client", "virtual:4349c0aec4bfbc571040e61015d1c8a33d59056152d89a97d109ddf9805d2aacee443b0916d4f26a7d367e9b10ef6e13ccc1d396cd8ec6d1a1014ab8ec11abda#npm:4.16.2"],\
+          ["@prisma/client", "workspace:prisma/client"],\
           ["@types/node", "npm:20.4.0"],\
           ["@yarnpkg/pnpify", "npm:4.0.0-rc.48"],\
           ["axios", "npm:1.4.0"],\
