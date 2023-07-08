@@ -1,5 +1,8 @@
 # kaspi-parser
 
+# Result demo
+[articles.json](https://github.com/LIMPIX31/kaspi-parser/blob/master/articles.json)
+
 # Requirements
 * Node: 18, 19
 * Do not use npm (yarn only)
